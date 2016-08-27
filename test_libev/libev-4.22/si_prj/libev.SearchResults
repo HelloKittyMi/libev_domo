@@ -1,0 +1,29 @@
+---- ev_loop Matches (31 in 4 files) ----
+Ev++.h:    operator struct ev_loop * () const throw ()
+Ev++.h:    operator const struct ev_loop * () const throw ()
+Ev++.h:    struct ev_loop* EV_AX;
+Ev++.h:    void set_embed (struct ev_loop *embedded_loop) throw ()
+Ev++.h:    void start (struct ev_loop *embedded_loop) throw ()
+Ev.c:  struct ev_loop
+Ev.c:  static struct ev_loop default_loop_struct;
+Ev.c:  EV_API_DECL struct ev_loop *ev_default_loop_ptr = 0; /* needs to be initialised to make it a definition despite extern */
+Ev.c:struct ev_loop * ecb_cold
+Ev.c:  EV_P = (struct ev_loop *)ev_malloc (sizeof (struct ev_loop));
+Ev.c:  memset (EV_A, 0, sizeof (struct ev_loop));
+Ev.c:struct ev_loop * ecb_cold
+Ev.c:  assert (("libev: ev_loop recursion during release detected", loop_done != EVBREAK_RECURSE));
+Ev.h:struct ev_loop;
+Ev.h:# define EV_P  struct ev_loop *loop               /* a loop as sole parameter in a declaration */
+Ev.h:  struct ev_loop *other; /* ro */
+Ev.h:EV_API_DECL struct ev_loop *ev_default_loop (unsigned int flags EV_CPP (= 0)) EV_THROW;
+Ev.h:EV_API_DECL struct ev_loop *ev_default_loop_ptr;
+Ev.h:EV_INLINE struct ev_loop *
+Ev.h:  extern struct ev_loop *ev_default_loop_ptr;
+Ev.h:EV_API_DECL struct ev_loop *ev_loop_new (unsigned int flags EV_CPP (= 0)) EV_THROW;
+Ev.h: * should not keep ev_loop from running, unref() after starting, and ref() before stopping.
+Ev.h:EV_API_DECL unsigned int ev_depth     (EV_P) EV_THROW; /* #ev_loop enters - #ev_loop leaves */
+Ev.h:    EV_INLINE void ev_loop   (EV_P_ int flags) { ev_run   (EV_A_ flags); }
+Ev.h:  typedef struct ev_loop ev_loop;
+Event.c:# define dLOOPev struct ev_loop *loop = (struct ev_loop *)ev->ev_base
+Event.c:# define dLOOPbase struct ev_loop *loop = (struct ev_loop *)base
+Event.c:/* never accessed, will always be cast from/to ev_loop */
